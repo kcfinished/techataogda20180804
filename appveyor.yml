@@ -15,7 +15,7 @@ dotnet_csproj:
   informational_version: '{version}'
 before_build:
 - ps: >-
-    cd stage1/src
+    cd ClientApp
 
     yarn install
 
@@ -23,9 +23,11 @@ before_build:
 
     yarn webpack
 
+    cd ..
+
     dotnet restore
 build:
-  project: stage1\src\stage1.csproj
+  project: teachatagoda.csproj
   verbosity: minimal
 notifications:
 - provider: GitHubPullRequest
