@@ -29,7 +29,7 @@ before_build:
 
     dotnet restore
 build:
-  project: src/techatagoda/techatagoda.csproj
+  project: techatagoda.csproj
   verbosity: minimal
 notifications:
 - provider: GitHubPullRequest
