@@ -15,17 +15,21 @@ dotnet_csproj:
   informational_version: '{version}'
 before_build:
 - ps: >-
-    cd ClientApp
+    cd src/techatagoda/ClientApp
 
     yarn install
 
     react-scripts build
 
+    cd ../../techatagoda.test
+
+    dotnet test
+
     cd ..
 
     dotnet restore
 build:
-  project: teachatagoda.csproj
+  project: src/teachatagoda/teachatagoda.csproj
   verbosity: minimal
 notifications:
 - provider: GitHubPullRequest

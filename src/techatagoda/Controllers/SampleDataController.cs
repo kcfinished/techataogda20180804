@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace teachatagoda.Controllers
+namespace techatagoda.Controllers
 {
     [Route("api/[controller]")]
     public class SampleDataController : Controller
