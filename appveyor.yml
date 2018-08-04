@@ -19,9 +19,7 @@ before_build:
 
     yarn install
 
-    yarn webpack --config webpack.config.vendor.js
-
-    yarn webpack
+    react-scripts build
 
     cd ..
 
